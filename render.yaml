@@ -2,8 +2,6 @@ services:
   - type: web
     name: ml-studio-backend
     env: python
-    runtime: python
-    pythonVersion: 3.10.13
-    buildCommand: "pip install --upgrade pip setuptools wheel && pip install --prefer-binary -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install --prefer-binary -r requirements.txt
+    startCommand: gunicorn app:app
     plan: free
